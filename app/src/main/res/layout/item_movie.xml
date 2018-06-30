@@ -16,11 +16,13 @@
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="294dp"
-        android:layout_height="105dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_toEndOf="@+id/ivPosterImage"
-        android:text="Movie overview and synopsis" />
+        android:text="Movie overview and synopsis"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
     <TextView
         android:id="@+id/tvTitle"

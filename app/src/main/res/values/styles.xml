@@ -9,8 +9,8 @@
     </style>
 
     <!-- Define your colors in `res/values/colors.xml` -->
-    <color name="simple_yellow">#ECD078</color>
-    <color name="primary_blue">#53777A</color>
+    <color name="dark_blue">#292c40</color>
+    <color name="primary_blue">#5f6694</color>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
@@ -22,11 +22,11 @@
     </style>
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@color/simple_yellow</item>
+        <item name="android:background">@color/dark_blue</item>
         <item name="android:titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
 
         <!-- Support library compatibility -->
-        <item name="background">@color/simple_yellow</item>
+        <item name="background">@color/dark_blue</item>
         <item name="titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
     </style>
 

@@ -17,6 +17,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 import me.nmargulies.flickster.models.Config;
 import me.nmargulies.flickster.models.Movie;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     // the list of currently playing movies
     ArrayList<Movie> movies;
     // the recycler view
-    RecyclerView rvMovies;
+    @BindView(R.id.rvMovies) RecyclerView rvMovies;
     // the adapter wired to the recycler view
     MovieAdapter adapter;
     // image config
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         // initialize the client
         client = new AsyncHttpClient();
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MovieAdapter(movies);
 
         // recieve the recycler view and connect a layout manager and the adapter
-        rvMovies = (RecyclerView) findViewById(R.id.rvMovies);
+        rvMovies = (RecyclerView) rvMovies;
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(adapter);
 
